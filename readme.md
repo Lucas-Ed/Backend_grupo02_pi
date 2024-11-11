@@ -39,7 +39,7 @@ No arquivo .env.example, renomeie para .env e adicione as variáveis de ambiente
 ```bash
 CONNECTION_STRING=postgres://seu-usuario:sua-senha@localhost:5432/cadastros
 ```
-No exemplo acima substitua na url seu usuário e senha do banco de dados Postgres, do PgAdmin.
+no exemplo acima substitua na url seu usuário e senha do banco de dados Postgres, do PgAdmin.
 
 Execute o backend localmente com o comando abaixo:
 
@@ -76,6 +76,24 @@ listar usuários:
 psql -U postgres -h localhost
 
 ```
+
+# Testes de Conexão
+
+Foram feitos testes na API com o uso da extensão RestClient no Vscode, para testar as rotas da API, abaixo segue as imagens dos métodos de teste HTTP utilizados.
+
+- Test GET, de funcionamento da API.
+![](img/teste_get01.PNG)
+<br>
+
+
+- Test GET, de requisição de conteúdo da tabela no banco de dados.
+![](img/teste_get02.PNG)
+<br>
+
+- Test POST, de cadastro de usuário.
+![](img/teste_post.PNG)
+
+
 ## Autores
 
 <table>
