@@ -1,0 +1,29 @@
+// REST Client
+//busca uma notificação
+GET http://localhost:3000/
+content-type: application/json
+###
+GET http://localhost:3000/cadastrados
+content-type: application/json
+###
+// Grava uma notificaçao no db
+POST http://localhost:3000/cadastrar
+content-type: application/json
+
+{
+  "name": "Fulano",
+  "email": "fulano@example.com"
+}
+
+###
+//Altera uma notificação
+PATCH http://localhost/3000/notifications
+content-type: application/json
+
+{
+     " recipitientId": "23456726",
+    " content": "dodowujggwhwhw",
+    "category ": "dwyhd"
+
+}
+###
