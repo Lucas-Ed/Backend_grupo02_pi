@@ -1,23 +1,23 @@
 // REST Client
-//busca uma notificação
+//busca retorno sobre a APi
 GET http://localhost:3000/
 content-type: application/json
 ###
 GET http://localhost:3000/cadastrados
 content-type: application/json
 ###
-// Grava uma notificaçao no db
+// Cadastra no db
 POST http://localhost:3000/cadastrar
 content-type: application/json
 
 {
-  "name": "Ciclano",
-  "email": "Ciclano@example.com"
+  "name": "Ciclano2",
+  "email": "Ciclano2@example.com"
 }
 
 ###
-//Altera uma notificação
-PATCH http://localhost/3000/notifications
+//Altera uma cadastro
+PATCH http://localhost/3000/modify_cadastro
 content-type: application/json
 
 {
