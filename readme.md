@@ -47,7 +47,6 @@ No arquivo .env.example, renomeie para .env e adicione as variáveis de ambiente
 
 ```bash
 PORT=3000
-#CONNECTION_STRING=postgres://postgres:postgre@localhost:5432/cadastros
 SUPABASE_URL=https://sua-url.supabase.co
 SUPABASE_KEY=sua-chave
 
