@@ -28,18 +28,20 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 </p>
 
-Foi utilizado o banco de dados Postgres para armazenar os dados dos usuários cadastrados em ambiente local, para produção foi utilizado o banco de dados ás a service: [Supabase](https://supabase.com).
+Foi utilizado o banco de dados Postgres para armazenar os dados cadastrados em ambiente local, para produção foi utilizado o banco de dados ás a service: [Supabase](https://supabase.com).
+
 
 Requisitos para rodar o projeto localmente:
 
 [NodeJs](https://nodejs.org/en/download/package-manager)-v18.17.0, ou superior, [PgAdmin4](https://www.pgadmin.org/download/),
 Baixe este repositório e execute o comando abaixo para instalar as dependências do projeto.
 
-Baixe este repositório e execute o comando abaixo para instalar as dependências do projeto.
+Nesta versão o projeto esta configurado em sua versão fim, para produção, para rodar localmente, é necessário alterar as variáveis de ambiente no arquivo .env, para as configurações do banco de dados local, e **Atenção:** para fazer requisições no banco de dados local usando PgAdmin4, é necessário fazer alterações no código fonte.
+
+O proxímo passo é instalar as dependência do projeto, execute o comando abaixo:
 
 ```bash
 npm install 
-
 ```
 No arquivo .env.example, renomeie para .env e adicione as variáveis de ambiente conforme o exemplo abaixo:
 
@@ -53,6 +55,17 @@ Execute o backend localmente com o comando abaixo:
 ```bash
 node index.js
 ```	
+
+Caso queira rodar o projeto em ambiente de produção, é necessário alterar as variáveis de ambiente no arquivo .env, para as configurações do banco de dados Supabase, e criar função RPC no Supabase no SqlEditor do banco de dados no Supabase, execute o comando abaixo:
+
+```bash
+create or replace function setval_sequence(sequence_name text, last_value bigint)
+returns void as $$
+begin
+  execute 'select setval(' || quote_literal(sequence_name) || ', ' || last_value || ')';
+end;
+$$ language plpgsql;
+```
 
 
 Rotas da Api
