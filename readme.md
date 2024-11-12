@@ -9,6 +9,8 @@
 
 Api em NodeJs, para cadastro de usuários e requisição de usuários do projeto Casa Sônia do Grupo-02 do [Projeto Interdisciplinar](https://github.com/Lucas-Ed/grupo-02_pi) da disciplina de Engenharia de Software I, 2024.2, <a href="https://fatecararas.cps.sp.gov.br/tecnologia-em-desenvolvimento-de-softwares-multiplataforma/">Curso DSM- Desenvolvimento de software multiplataforma.</a>
 
+<h3 align="center">✅ Concluído ✅</h3>
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -27,6 +29,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 </p>
 
 Foi utilizado o banco de dados Postgres para armazenar os dados dos usuários cadastrados em ambiente local, para produção foi utilizado o banco de dados ás a service: [Supabase](https://supabase.com).
+
+Requisitos para rodar o projeto localmente:
+
+[NodeJs](https://nodejs.org/en/download/package-manager)-v18.17.0, ou superior, [PgAdmin4](https://www.pgadmin.org/download/),
+Baixe este repositório e execute o comando abaixo para instalar as dependências do projeto.
 
 Baixe este repositório e execute o comando abaixo para instalar as dependências do projeto.
 
