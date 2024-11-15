@@ -46,10 +46,7 @@ npm install
 No arquivo .env.example, renomeie para .env e adicione as variáveis de ambiente conforme o exemplo abaixo:
 
 ```bash
-PORT=3000
-SUPABASE_URL=https://sua-url.supabase.co
-SUPABASE_KEY=sua-chave
-
+CONNECTION_STRING=postgres://seu-usuario:sua-senha@localhost:5432/cadastros
 ```
 no exemplo acima substitua na url seu usuário e senha do banco de dados Postgres, do PgAdmin.
 

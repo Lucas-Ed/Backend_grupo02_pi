@@ -1,12 +1,12 @@
 const { createClient } = require('@supabase/supabase-js');
-const supabase = require('./supabaseClient');
+const supabase = require('../supabaseClient');
 
 
 require("dotenv").config();
 
 // const db = require("./db");
 //const app = express();
-const port = process.env.PORT;
+const port = 3000;
 
 const express = require("express");
 const app = express();
@@ -131,5 +131,3 @@ async function resetSequence() {
     console.error("Erro ao redefinir a sequência:", error);
   }
 }
-
-
