@@ -22,9 +22,21 @@ app.use(express.json());
 
 
 // Redefine a sequência antes de iniciar o servidor
-resetSequence().then(() => {
+//resetSequence().then(() => {
   // Inicia o servidor
-  app.listen(port, () => console.log(`API funcionando na porta ${port}!`));
+  //app.listen(port, () => console.log(`API funcionando na porta ${port}!`));
+//});
+
+// Inicia o servidor diretamente
+app.listen(port, () => {
+  console.log(`API funcionando na porta ${port}!`);
+  
+  // Executa a redefinição da sequência em segundo plano
+  resetSequence().then(() => {
+    console.log("Sequência redefinida com sucesso.");
+  }).catch(error => {
+    console.error("Erro ao redefinir a sequência:", error);
+  });
 });
 
 // Rota get para saber se a api esta funcionando.
