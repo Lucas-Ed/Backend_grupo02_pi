@@ -4,9 +4,9 @@ const supabase = require('./supabaseClient');
 
 require("dotenv").config();
 
-const db = require("./db");
+// const db = require("./db");
 //const app = express();
-const port = process.env.PORT;
+const port = 3000;//process.env.PORT;
 
 const express = require("express");
 const app = express();
