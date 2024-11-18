@@ -1,15 +1,15 @@
-const { createClient } = require('@supabase/supabase-js');
-const supabase = require('./supabaseClient');
+//const { createClient } = require('@supabase/supabase-js');
+//const supabase = require('./supabaseClient');
 
-
+const express = require("express");
+const supabase = require("./supabaseClient"); // importa o cliente do Supabase
 require("dotenv").config();
 
 // const db = require("./db");
 //const app = express();
-const port = 3000;//process.env.PORT;
 
-const express = require("express");
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
@@ -21,6 +21,13 @@ app.use(express.json());
 // module.exports = supabase;
 
 
+// Redefine a sequência antes de iniciar o servidor
+resetSequence().then(() => {
+  // Inicia o servidor
+  app.listen(port, () => console.log(`API funcionando na porta ${port}!`));
+});
+
+// Rota get para saber se a api esta funcionando.
 app.get("/", (req, res) => res.json({ message: "Funcionando !" }));
 
 // Rota para obter dados de 'cadastrados' no Supabase
@@ -56,6 +63,9 @@ app.get("/cadastrados", async (req, res) => {
 // Rota para obter dados de 'cadastrados' no supabase
 app.post('/cadastrar', async (req, res) => {
   const { name, email } = req.body;
+  if (!name || !email) {
+    return res.status(400).json({ message: "Nome e e-mail são obrigatórios." });
+  }
 
   try {
     const { data, error } = await supabase
@@ -72,13 +82,6 @@ app.post('/cadastrar', async (req, res) => {
     console.error("Erro ao inserir dados no Supabase:", error);
     res.status(500).json({ message: "Erro ao inserir dados no Supabase." });
   }
-});
-
-
-// Redefine a sequência antes de iniciar o servidor
-resetSequence().then(() => {
-  // Inicia o servidor
-  app.listen(port, () => console.log(`API funcionando na porta ${port}!`));
 });
 
   
@@ -131,5 +134,3 @@ async function resetSequence() {
     console.error("Erro ao redefinir a sequência:", error);
   }
 }
-
-

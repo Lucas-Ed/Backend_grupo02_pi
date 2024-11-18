@@ -117,6 +117,10 @@ Foram feitos testes na API com o uso da extensão RestClient no Vscode, para tes
 ![](img/teste_post.PNG)
 
 
+## Repositório principal.
+
+Veja [aqui.](https://github.com/Lucas-Ed/grupo-02_pi)
+---
 ## Autores
 
 <table>
