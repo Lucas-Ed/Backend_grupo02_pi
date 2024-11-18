@@ -10,4 +10,5 @@
     { "src": "/cadastrados", "dest": "index.js" },
     { "src": "/cadastrar", "dest": "index.js" },
     { "src": "/", "dest": "index.js" }
+    ]
 }
