@@ -11,8 +11,8 @@ POST http://localhost:3000/cadastrar
 content-type: application/json
 
 {
-  "name": "lucas-supabase",
-  "email": "lucas@example.com"
+  "name": "lucas6-supabase",
+  "email": "lucas6@example.com"
 }
 
 ###

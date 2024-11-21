@@ -2,6 +2,7 @@
 //const supabase = require('./supabaseClient');
 
 const express = require("express");
+const cors = require("cors");
 const supabase = require("./supabaseClient"); // importa o cliente do Supabase
 require("dotenv").config();
 
@@ -11,6 +12,8 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Ativa o CORS
+app.use(cors()); // Permite todas as origens por padrão
 app.use(express.json());
 
 // const supabaseUrl = process.env.SUPABASE_URL;
@@ -20,24 +23,6 @@ app.use(express.json());
 
 // module.exports = supabase;
 
-
-// Redefine a sequência antes de iniciar o servidor
-//resetSequence().then(() => {
-  // Inicia o servidor
-  //app.listen(port, () => console.log(`API funcionando na porta ${port}!`));
-//});
-
-// Inicia o servidor diretamente
-app.listen(port, () => {
-  console.log(`API funcionando na porta ${port}!`);
-  
-  // Executa a redefinição da sequência em segundo plano
-  resetSequence().then(() => {
-    console.log("Sequência redefinida com sucesso.");
-  }).catch(error => {
-    console.error("Erro ao redefinir a sequência:", error);
-  });
-});
 
 // Rota get para saber se a api esta funcionando.
 app.get("/", (req, res) => res.json({ message: "Funcionando !" }));
@@ -96,6 +81,23 @@ app.post('/cadastrar', async (req, res) => {
   }
 });
 
+// Redefine a sequência antes de iniciar o servidor
+//resetSequence().then(() => {
+  // Inicia o servidor
+  //app.listen(port, () => console.log(`API funcionando na porta ${port}!`));
+//});
+
+// Inicia o servidor diretamente
+app.listen(port, () => {
+  console.log(`API funcionando na porta ${port}!`);
+  
+  // Executa a redefinição da sequência em segundo plano
+  resetSequence().then(() => {
+    console.log("Sequência redefinida com sucesso.");
+  }).catch(error => {
+    console.error("Erro ao redefinir a sequência:", error);
+  });
+});
   
 // Rota para adicionar um novo cliente-(usar localmente)
 // app.post("/cadastrar", async (req, res) => {
