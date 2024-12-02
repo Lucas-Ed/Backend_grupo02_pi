@@ -9,6 +9,10 @@
 
 Api em NodeJs, para cadastro de usuários e requisição de usuários do projeto Casa Sônia do Grupo-02 do [Projeto Interdisciplinar](https://github.com/Lucas-Ed/grupo-02_pi) da disciplina de Engenharia de Software I, 2024.2, <a href="https://fatecararas.cps.sp.gov.br/tecnologia-em-desenvolvimento-de-softwares-multiplataforma/">Curso DSM- Desenvolvimento de software multiplataforma.</a>
 
+Licença Creative Commons 4.0 não comercial, para mais informações acesse o link:
+
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
 <h3 align="center">✅ Concluído ✅</h3>
 
 ## 🚀 Tecnologias
@@ -206,7 +210,7 @@ Professor, <a href="https://github.com/orlandosaraivajr">Orlando Saraiva.</a>
   ---
 ## :memo: Licença
 
-Esse projeto está sob a licença MIT.
+Esse projeto está sob a licença Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0).
 
 ---
 
